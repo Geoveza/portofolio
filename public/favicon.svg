@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ff9d"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#1a1a1a"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded square background -->
+  <rect x="5" y="5" width="90" height="90" rx="20" ry="20" fill="url(#bgGradient)"/>
+  
+  <!-- Inner dark background -->
+  <rect x="12" y="12" width="76" height="76" rx="15" ry="15" fill="url(#codeGradient)"/>
+  
+  <!-- Code icon </> -->
+  <g fill="#00ff9d">
+    <!-- Left bracket < -->
+    <path d="M32 50 L42 35 L36 35 L26 50 L36 65 L42 65 Z"/>
+    <!-- Right bracket > -->
+    <path d="M68 50 L58 35 L64 35 L74 50 L64 65 L58 65 Z"/>
+    <!-- Slash / -->
+    <path d="M48 65 L42 65 L52 35 L58 35 Z"/>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+# Files and folders to exclude from deployment
+
+# Dependencies
+vendor\
+node_modules\
+
+# Git
+.git\
+.gitignore
+
+# Environment and secrets
+.env
+.env.backup
+
+# Logs
+*.log
+storage\logs\
+storage\framework\cache\
+storage\framework\sessions\
+storage\framework\views\
+
+# Temporary files
+tmp\
+temp\
+*.tmp
+*.temp
+
+# IDE and editor
+.vscode\
+.idea\
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Build files (if any)
+dist\
+build\
+
+# Documentation (keep README.md)
+DEPLOY*.md
+SECURITY*.md
+
+# GitHub
+.github\

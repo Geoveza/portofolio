@@ -1,0 +1,82 @@
+# Laravel & PHP
+/vendor/
+/node_modules/
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+# Laravel Storage
+/storage/*.key
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+!storage/framework/cache/data/.gitignore
+!storage/framework/sessions/.gitignore
+!storage/framework/testing/.gitignore
+!storage/framework/views/.gitignore
+!storage/logs/.gitignore
+
+# Database
+/database/database.sqlite
+/database/*.sqlite3
+
+# Testing
+/coverage
+.php_cs.cache
+.php-cs-fixer.cache
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+error_log
+access_log
+
+# Temporary files
+/tmp/
+/temp/
+*.tmp
+*.temp
+cache/
+sessions/
+views/
+
+# Deployment archives
+*.tar.gz
+*.zip
+*.rar
+deploy_temp/
+
+# Composer
+composer.phar
+
+# Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Optional: Keep these if you want to version control them
+# /public/hot
+# /public/storage
+# /public/build
