@@ -804,14 +804,52 @@
             }
             
             header {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 32px 0 24px;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 24px 0 20px;
             }
             
             .header-left {
-                width: 100%;
-                justify-content: space-between;
+                width: auto;
+                justify-content: flex-start;
+            }
+            
+            /* Mobile theme toggle - scaled down version of desktop toggle */
+            .header-right {
+                position: static;
+                z-index: auto;
+            }
+            
+            .theme-switch {
+                width: 44px;
+                height: 22px;
+            }
+            
+            .theme-slider {
+                border-radius: 22px;
+            }
+            
+            .theme-slider::before {
+                height: 18px;
+                width: 18px;
+                left: 2px;
+                bottom: 2px;
+            }
+            
+            .theme-slider::after {
+                left: 5px;
+                font-size: 10px;
+            }
+            
+            .theme-icons {
+                right: 5px;
+                font-size: 10px;
+            }
+            
+            [data-theme="dark"] .theme-slider::before,
+            input:checked + .theme-slider::before {
+                transform: translateX(22px);
             }
             
             .item {
@@ -1572,6 +1610,137 @@
                     </div>
                 </article>
 
+            </section>
+
+             <!-- Education & Bootcamp Section -->
+            <section aria-labelledby="education-heading" class="education-section">
+                <h2 id="education-heading">Education & Bootcamp</h2>
+                
+                <div class="education-timeline">
+                    <!-- Education 1: Formal Education -->
+                    <article class="education-card" style="--delay: 0s">
+                        <div class="education-logo-wrapper">
+                            <img src="images/education/upn.png" 
+                                 alt="UPN Veteran Jawa Timur logo" 
+                                 class="education-logo"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="education-logo-fallback" style="display: none;">U</div>
+                        </div>
+                        
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-meta">
+                                    <span class="education-type">Formal Education</span>
+                                    <span class="education-year">2021 - 2025</span>
+                                </div>
+                                <h3 class="education-institution">Universitas Pembangunan Nasional Veteran Jawa Timur</h3>
+                                <p class="education-degree">Bachelor of Public Administration</p>
+                            </div>
+                            
+                            <p class="education-description">Studied public administration with focus on governance, policy analysis, and public service management.</p>
+                            
+                            <div class="education-location">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Surabaya, Indonesia</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Education 2: Bootcamp -->
+                    <article class="education-card" style="--delay: 0.1s">
+                        <div class="education-logo-wrapper">
+                            <img src="images/education/gdsc.png" 
+                                 alt="Google Developer Student Clubs logo" 
+                                 class="education-logo"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="education-logo-fallback" style="display: none;">G</div>
+                        </div>
+                        
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-meta">
+                                    <span class="education-type">Bootcamp</span>
+                                    <span class="education-year">2022 - 2025</span>
+                                </div>
+                                <h3 class="education-institution">Google Developer Student Clubs</h3>
+                                <p class="education-degree">Developer Bootcamp</p>
+                            </div>
+                            
+                            <p class="education-description">Participating in a GDSC Developer Bootcamp provides skills in programming fundamentals, web or mobile application development, API integration, and version control using Git and GitHub. It also enhances problem-solving, debugging, and understanding of the software development lifecycle, along with basic UI/UX and cloud concepts.</p>
+                            
+                            <div class="education-location">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Remote</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Education 3: Cloud Bootcamp -->
+                    <article class="education-card" style="--delay: 0.2s">
+                        <div class="education-logo-wrapper">
+                            <img src="images/education/gcp.png" 
+                                 alt="Google Cloud logo" 
+                                 class="education-logo"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="education-logo-fallback" style="display: none;">G</div>
+                        </div>
+                        
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-meta">
+                                    <span class="education-type">Bootcamp</span>
+                                    <span class="education-year">2019 - 2026</span>
+                                </div>
+                                <h3 class="education-institution">JuaraGCP by Google Cloud</h3>
+                                <p class="education-degree">Cloud Bootcamp</p>
+                            </div>
+                            
+                            <p class="education-description">Participating in the JuaraGCP Cloud Bootcamp by Google Cloud equips participants with fundamental to intermediate skills in cloud computing, including deploying and managing applications on Google Cloud Platform, working with services such as Compute Engine, Cloud Storage, and Kubernetes.</p>
+                            
+                            <div class="education-location">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Remote</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Education 4: Blockchain Certification -->
+                    <article class="education-card" style="--delay: 0.3s">
+                        <div class="education-logo-wrapper">
+                            <img src="images/education/alchemy.png" 
+                                 alt="Alchemy logo" 
+                                 class="education-logo"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="education-logo-fallback" style="display: none;">A</div>
+                        </div>
+                        
+                        <div class="education-content">
+                            <div class="education-header">
+                                <div class="education-meta">
+                                    <span class="education-type">Certification</span>
+                                    <span class="education-year">2020 - 2021</span>
+                                </div>
+                                <h3 class="education-institution">Alchemy</h3>
+                                <p class="education-degree">Blockchain Bootcamp</p>
+                            </div>
+                            
+                            <p class="education-description">Participating in the Alchemy University Blockchain Bootcamp provides foundational to intermediate skills in blockchain development, including understanding blockchain architecture, smart contracts, and decentralized applications (dApps). Participants gain hands-on experience using tools such as Solidity, Ethereum, and Web3 libraries.</p>
+                            
+                            <div class="education-location">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                                </svg>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
 
             <!-- Links Section -->
